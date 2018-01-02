@@ -1,0 +1,38 @@
+{
+	"name": "gamepoints",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@types/react-transition-group": "^2.0.6",
+		"@types/reselect": "^2.2.0",
+		"eslint": "^4.14.0",
+		"node-less-chokidar": "^0.1.2",
+		"npm-run-all": "^4.1.2",
+		"prettier": "^1.9.2",
+		"react": "^16.2.0",
+		"react-dom": "^16.2.0",
+		"react-redux": "^5.0.6",
+		"react-scripts-ts": "2.8.0",
+		"react-transition-group": "^2.2.1",
+		"redux": "^3.7.2",
+		"reselect": "^3.0.1"
+	},
+	"devDependencies": {
+		"@types/jest": "^21.1.10",
+		"@types/node": "^8.5.2",
+		"@types/react": "^16.0.31",
+		"@types/react-dom": "^16.0.3",
+		"@types/react-redux": "^5.0.14",
+		"@types/redux": "^3.6.0"
+	},
+	"scripts": {
+		"start-js": "react-scripts-ts start",
+		"build-js": "react-scripts-ts build",
+		"start": "npm-run-all -p watch-css start-js",
+		"build": "npm-run-all build-css build-js",
+		"test": "react-scripts-ts test --env=jsdom",
+		"eject": "react-scripts-ts eject",
+		"build-css": "node-less-chokidar src/ -o src/",
+		"watch-css": "npm run build-css && node-less-chokidar src/ -o src/ --watch --recursive"
+	}
+}

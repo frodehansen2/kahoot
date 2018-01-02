@@ -1,0 +1,32 @@
+.itemslist {
+  padding: 0;
+  margin: 0;
+  list-style: inside;
+  list-style-type: none;
+  display: table;
+  width: 100%;
+}
+.itemslist__item {
+  display: table-row;
+}
+.itemslist__item > * {
+  border-bottom: 2px solid rgba(204, 204, 204, 0.6);
+  display: table-cell;
+  padding: 1rem;
+  vertical-align: middle;
+}
+.itemslist__item__answer {
+  padding-left: 2rem;
+  font-size: 1.6rem;
+  font-weight: 900;
+  width: 20%;
+}
+.itemslist__item__count,
+.itemslist__item__score {
+  text-align: right;
+  font-size: 1.2rem;
+  width: 40%;
+}
+.itemslist__item__score {
+  padding-right: 2rem;
+}

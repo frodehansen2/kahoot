@@ -1,0 +1,12 @@
+.itemslist {
+  list-style: inside;
+  list-style-type: none;
+  display: table;
+  width: 100%;
+}
+.itemslist__item {
+  display: table-row;
+}
+.itemslist__item > * {
+  display: table-cell;
+}
