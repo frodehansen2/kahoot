@@ -2,7 +2,6 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import App from "./containers/App";
 import reducers from "./reducers";
-import registerServiceWorker from "./registerServiceWorker";
 import "./styles/index.less";
 
 import { Provider } from "react-redux";
@@ -28,4 +27,3 @@ ReactDOM.render(
 	</Provider>,
 	document.getElementById("root") as HTMLElement
 );
-registerServiceWorker();
