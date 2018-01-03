@@ -39,8 +39,21 @@
 		display: table-row;
 		font-size: 1.2rem;
 		&__answer {
+			position: relative;
 			font-size: 1.6rem;
 			font-weight: 900;
+		}
+	}
+	&__itemHighlight {
+		transition: opacity 0.15s ease-out;
+		transform: translate3d(0, 0, 0);
+		display: inline-block;
+		position: relative;
+
+		&--active {
+			transition: all 0.2s ease-in;
+			transform: translate3d(0, 0, 0) scale(2.5);
+			opacity: 0;
 		}
 	}
 }

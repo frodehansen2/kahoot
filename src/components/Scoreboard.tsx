@@ -1,6 +1,7 @@
 import * as React from "react";
 import { GameScore } from "../types/index";
 import ItemsList from "./ItemsList";
+import Hightlight from "./Hightlight";
 
 interface Props {
 	gamescore: GameScore;
@@ -29,7 +30,14 @@ const Scoreboard: React.StatelessComponent<Props> = ({
 					<div className="scoreAndReset__score">
 						<h3 className="totalScore" role="status" aria-live="polite">
 							<span className="totalScore__label">Total: </span>
-							<span className="totalScore__score">{gamescore.total}</span>
+							<span className="totalScore__score">
+								<Hightlight
+									value={gamescore.total}
+									inline={true}
+									className="totalHightlight">
+									{gamescore.total}
+								</Hightlight>
+							</span>
 						</h3>
 					</div>
 					<div className="scoreAndReset__reset">

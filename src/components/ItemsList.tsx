@@ -1,5 +1,6 @@
 import * as React from "react";
 import { ItemScore } from "../types/index";
+import Hightlight from "./Hightlight";
 
 interface Props {
 	items: ItemScore[];
@@ -18,7 +19,15 @@ class Item extends React.Component<ItemProps> {
 					{answer}
 				</span>
 				<span className="itemslist__item__count  col col--count">{count}</span>
-				<span className="itemslist__item__score col col--score">{score}</span>
+				<span className="itemslist__item__score col col--score">
+					<Hightlight
+						value={count}
+						inline={true}
+						duration={300}
+						className="itemslist__itemHighlight">
+						{score}
+					</Hightlight>
+				</span>
 			</li>
 		);
 	}
