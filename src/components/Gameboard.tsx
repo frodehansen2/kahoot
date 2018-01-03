@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Answer } from "../types/index";
+import * as classNames from "classnames";
+import { isTouchDevice } from "../utils";
 
 export interface Props {
 	answers: Answer[];
@@ -10,16 +12,20 @@ const GameBoard: React.StatelessComponent<Props> = props => {
 	return (
 		<section className="gameboard">
 			<div className="gameboard__header">
-				<h2>Items</h2>
+				<h2>Pick items</h2>
 			</div>
-			{props.answers.map((answer: Answer) => (
-				<button
-					key={answer}
-					onClick={() => props.onAnswer(answer)}
-					className="gameboard__item gameboard__item--selectable">
-					{answer}
-				</button>
-			))}
+			<div className="gameboard__itemsContainer">
+				{props.answers.map((answer: Answer) => (
+					<button
+						key={answer}
+						onClick={() => props.onAnswer(answer)}
+						className={classNames("gameboard__item", {
+							"gameboard__item--hoverable": !isTouchDevice()
+						})}>
+						{answer}
+					</button>
+				))}
+			</div>
 		</section>
 	);
 };

@@ -1,8 +1,25 @@
-.gameboard {
-	@size: 100px;
+.gameboard__item-focus() {
 	color: white;
+	background-color: @c-blue;
+	transform: scale(1.05);
+	box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.gameboard {
+	@size: 90px;
+	color: white;
+	z-index: @z-gameboard;
+	position: relative;
+	height: 100%;
 	&__header {
 		margin-bottom: 2rem;
+	}
+	&__itemsContainer {
+		position: absolute;
+		overflow: auto;
+		width: 100%;
+		bottom: 0;
+		top: 3em;
 	}
 	&__item {
 		width: @size;
@@ -18,17 +35,18 @@
 		background-color: @c-white;
 		color: @c-black;
 		cursor: pointer;
-		&:focus,
-		&:hover {
-			color: white;
-			background-color: @c-blue;
-			transform: scale(1.05);
-			box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.4);
+		&:focus {
+			.gameboard__item-focus();
 		}
 		&:active {
 			color: white;
 			background-color: darken(@c-blue, 10);
 			transform: scale(0.98);
+		}
+		&--hoverable {
+			&:hover {
+				.gameboard__item-focus();
+			}
 		}
 	}
 }
