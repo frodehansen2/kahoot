@@ -161,3 +161,55 @@ body {
 		font-size: 14px;
 	}
 }
+
+/** Basic small device responsive setup */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+	.kahootgame__header {
+		padding: 1rem;
+		height: 5rem;
+	}
+	.main-container {
+		top: 5.5rem;
+		padding-top: 1rem;
+		padding-left: 1rem;
+		padding-bottom: 1rem;
+		bottom: 0rem;
+	}
+	.gameboard__item {
+		width: 4.8rem;
+		height: 4.8rem;
+	}
+
+	.scoreboard-container {
+		right: 1rem;
+	}
+	.scoreboard__itemslist,
+	.scoreboard__header {
+		display: none;
+	}
+	.scoreboard__total,
+	.scoreboard__bonus {
+		padding: 1rem 2rem;
+	}
+	.scoreboard__total {
+		display: flex;
+		padding-bottom: 1.5rem;
+		flex: 2;
+	}
+	.scoreAndReset {
+		width: 100%;
+		flex-flow: column;
+		&__score {
+			text-align: center;
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+		&__reset {
+			text-align: center;
+			width: 100%;
+		}
+	}
+	body {
+		font-size: 14px;
+	}
+}
