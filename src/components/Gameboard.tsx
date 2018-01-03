@@ -19,7 +19,10 @@ const GameBoard: React.StatelessComponent<Props> = props => {
 					<button
 						type="button"
 						key={answer}
-						onClick={() => props.onAnswer(answer)}
+						onClick={evt => {
+							evt.preventDefault(); // prevent zoom
+							props.onAnswer(answer);
+						}}
 						className={classNames("gameboard__item", {
 							"gameboard__item--hoverable": !isTouchDevice()
 						})}>
