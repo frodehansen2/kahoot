@@ -17,6 +17,7 @@ const GameBoard: React.StatelessComponent<Props> = props => {
 			<div className="gameboard__itemsContainer">
 				{props.answers.map((answer: Answer) => (
 					<button
+						type="button"
 						key={answer}
 						onClick={() => props.onAnswer(answer)}
 						className={classNames("gameboard__item", {
