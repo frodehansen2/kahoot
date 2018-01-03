@@ -50,10 +50,12 @@ class App extends React.Component<Props> {
 						onAnswer={(answer: Answer) => dispatch(registerAnswer(answer))}
 					/>
 				</div>
-				<Scoreboard
-					gamescore={gamescore}
-					onReset={() => this.props.dispatch(resetGame())}
-				/>
+				<div className="scoreboard-container">
+					<Scoreboard
+						gamescore={gamescore}
+						onReset={() => this.props.dispatch(resetGame())}
+					/>
+				</div>
 			</div>
 		);
 	}

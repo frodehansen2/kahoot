@@ -4,8 +4,6 @@
 @import "./_gameboard";
 @import "./_scoreboard";
 
-@header_height: 6rem;
-
 h1,
 h2,
 h3,
@@ -61,7 +59,7 @@ body {
 	padding: 1.5rem 2rem;
 	position: fixed;
 	top: 0;
-	height: @header_height;
+	height: @headerHeight;
 	left: 0;
 	width: 100%;
 }
@@ -70,7 +68,7 @@ body {
 	flex: 1;
 	width: 100%;
 	position: fixed;
-	top: @header_height;
+	top: @headerHeight;
 	bottom: 0;
 	overflow: hidden;
 	background: @c-purple;
@@ -82,6 +80,15 @@ body {
 	}
 }
 
+.scoreboard-container {
+	z-index: @z-scoreboard;
+	position: fixed;
+	top: 1.5rem;
+	bottom: 1.5rem;
+	right: 2rem;
+	width: @width-scoreboard;
+	overflow: hidden;
+}
 .gametitle {
 	display: flex;
 	flex-wrap: nowrap;

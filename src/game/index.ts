@@ -2,7 +2,9 @@ import { Score, Answer, ItemScore } from "../types";
 import { scoring } from "../data/scoring";
 
 export const sortItemScore = (is1: ItemScore, is2: ItemScore) =>
-	is1.score === is2.score ? 0 : is1.score <= is2.score ? 1 : -1;
+	is1.score === is2.score
+		? is1.answer < is2.answer ? -1 : 1
+		: is1.score <= is2.score ? 1 : -1;
 
 export function calculateAnswerScore(count: number, score: Score): number {
 	if (!score.bonus || count < score.bonus.count) {
