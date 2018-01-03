@@ -12,7 +12,7 @@ const GameBoard: React.StatelessComponent<Props> = props => {
 	return (
 		<section className="gameboard">
 			<div className="gameboard__header">
-				<h2>Pick items</h2>
+				<h2>Collect items</h2>
 			</div>
 			<div className="gameboard__itemsContainer">
 				{props.answers.map((answer: Answer) => (

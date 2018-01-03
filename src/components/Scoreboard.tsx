@@ -27,7 +27,7 @@ const Scoreboard: React.StatelessComponent<Props> = ({
 			<div className="scoreboard__total">
 				<div className="scoreAndReset">
 					<div className="scoreAndReset__score">
-						<h3 className="totalScore">
+						<h3 className="totalScore" role="status" aria-live="polite">
 							<span className="totalScore__label">Total: </span>
 							<span className="totalScore__score">{gamescore.total}</span>
 						</h3>
