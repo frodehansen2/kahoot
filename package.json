@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"chokidar": "^2.0.0",
 		"eslint": "^4.14.0",
 		"node-less-chokidar": "^0.1.2",
 		"npm-run-all": "^4.1.2",
@@ -26,7 +27,8 @@
 	"scripts": {
 		"start-js": "react-scripts-ts start",
 		"build-js": "react-scripts-ts build",
-		"start": "npm-run-all -p watch-css start-js",
+		"start": "npm-run-all -p build-js build-css start-js",
+		"start-dev": "npm-run-all -p build-css watch-css start-js",
 		"build": "npm-run-all build-css build-js",
 		"test": "react-scripts-ts test --env=jsdom",
 		"eject": "react-scripts-ts eject",
