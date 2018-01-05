@@ -8,4 +8,4 @@ b. run yarn or npm install
 c. open http://localhost:3000
 
 Requirements: 
-- chokidar-cli installed globaly
+- chokidar-cli installed globally
