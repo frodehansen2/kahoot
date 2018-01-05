@@ -6,3 +6,6 @@ Basic implementation of Kahoot! points.
 a. Clone repo
 b. run yarn or npm install
 c. open http://localhost:3000
+
+Requirements: 
+- chokidar-cli installed globaly
